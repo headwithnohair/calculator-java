@@ -18,7 +18,7 @@ import java.util.Arrays;
 
 public class Ccal extends JFrame {
 	private JTextField textField;
-	private String text="";//´´½¨text£¬ÎªÎÄ±¾¿òËùµÃÊäÈëÈ¡µÃ´æÈ¡¿Õ¼ä
+	private String text="";//åˆ›å»ºtextï¼Œä¸ºæ–‡æœ¬æ¡†æ‰€å¾—è¾“å…¥å–å¾—å­˜å–ç©ºé—´
 	 String wellP;
 	/**
 	 * Launch the application.
@@ -40,21 +40,21 @@ public class Ccal extends JFrame {
 	 * Create the frame.
 	 */
 	public Ccal() {
-//		ÒÔÏÂ¶¼ÊÇ¶Ô°´Å¥µÄ²¼¾ÖÒÔ¼°°²ÅÅÊÂ¼ş
-//		Ã¿°´Ò»´Î£¬ÎÄ±¾¿ò¶¼»áÍùºó¼Ó°´Å¥ËùÏÔÊ¾×Ö·ûchar
-//		ÀûÓÃ JFeild.setText()·½·¨ÏÔÊ¾ÎÄ±¾£».getText()»ñÈ¡ÎÄ±¾£»
-//		ÀûÓÃ Sting¡£concat()·½·¨£¬½«Ã¿Ò»´Î°´Å¥¡¢»òÕßÓÃ»§ÊäÈëÁ¬½Ó£¬ÀûÓÃ×Ö·û´®text½ÓÊÕ£»
+//		ä»¥ä¸‹éƒ½æ˜¯å¯¹æŒ‰é’®çš„å¸ƒå±€ä»¥åŠå®‰æ’äº‹ä»¶
+//		æ¯æŒ‰ä¸€æ¬¡ï¼Œæ–‡æœ¬æ¡†éƒ½ä¼šå¾€ååŠ æŒ‰é’®æ‰€æ˜¾ç¤ºå­—ç¬¦char
+//		åˆ©ç”¨ JFeild.setText()æ–¹æ³•æ˜¾ç¤ºæ–‡æœ¬ï¼›.getText()è·å–æ–‡æœ¬ï¼›
+//		åˆ©ç”¨ Stingã€‚concat()æ–¹æ³•ï¼Œå°†æ¯ä¸€æ¬¡æŒ‰é’®ã€æˆ–è€…ç”¨æˆ·è¾“å…¥è¿æ¥ï¼Œåˆ©ç”¨å­—ç¬¦ä¸²textæ¥æ”¶ï¼›
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 265, 234);
-//		ÉèÖÃLayout²¼¾Ö
+//		è®¾ç½®Layoutå¸ƒå±€
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{40, 40, 40, 40, 0};
 		gridBagLayout.rowHeights = new int[]{0, 40, 40, 40, 40, 0};
 		gridBagLayout.columnWeights = new double[]{1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{1.0, 1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
-		getContentPane().setLayout(gridBagLayout);//²¼¾Ö·ÅÈë³ÌĞò¿ò
-//		ÉèÖÃÎÄ±¾¿ò
+		getContentPane().setLayout(gridBagLayout);//å¸ƒå±€æ”¾å…¥ç¨‹åºæ¡†
+//		è®¾ç½®æ–‡æœ¬æ¡†
 		textField = new JTextField();
 		GridBagConstraints gbc_textField = new GridBagConstraints();
 		gbc_textField.gridwidth = 3;
@@ -69,8 +69,8 @@ public class Ccal extends JFrame {
 		btnNewButton_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				text="";//ÖØÖÃtextµÄÖµ
-				textField.setText(text);//ÉÏ´«Öµµ½ÎÄ±¾¿ò
+				text="";//é‡ç½®textçš„å€¼
+				textField.setText(text);//ä¸Šä¼ å€¼åˆ°æ–‡æœ¬æ¡†
 			}
 		});
 		GridBagConstraints gbc_btnNewButton_9 = new GridBagConstraints();
@@ -83,8 +83,8 @@ public class Ccal extends JFrame {
 		JButton btnNewButton = new JButton("1");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				text=text.concat("1");//text ×Ö·û´®ºó½Ó¡°1¡±
-				textField.setText(text);//ÉÏ´«Öµµ½ÎÄ±¾¿ò£¨ÏÂÍ¬£©
+				text=text.concat("1");//text å­—ç¬¦ä¸²åæ¥â€œ1â€
+				textField.setText(text);//ä¸Šä¼ å€¼åˆ°æ–‡æœ¬æ¡†ï¼ˆä¸‹åŒï¼‰
 			}
 		});
 		
@@ -281,7 +281,7 @@ public class Ccal extends JFrame {
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				wellP =textField.getText();
-//				½«ÎÄ±¾¿òÄÚÈİ´«µ½wellp×Ö·û´®
+//				å°†æ–‡æœ¬æ¡†å†…å®¹ä¼ åˆ°wellpå­—ç¬¦ä¸²
 				judge();
 			}
 		});
@@ -315,19 +315,19 @@ public class Ccal extends JFrame {
 		char [] fuHao = new char[20];
 		
 		if(wellP.startsWith(".")||wellP.startsWith("+")||wellP.startsWith("*")||wellP.endsWith("/"))
-		{// error0:ÓÃÓÚÅĞ¶Ï¿ªÍ·ÊÇ·ñ·ûºÏÔËËã¹æÔò
+		{// error0:ç”¨äºåˆ¤æ–­å¼€å¤´æ˜¯å¦ç¬¦åˆè¿ç®—è§„åˆ™
 			System.out.println("error0");
 			textField.setText("error0");
-			return;//Èç¹û±¨´í£¬ÀûÓÃ£¨return£»£©Óï¾ä½áÊø´Ë´ÎµÈºÅ°´Å¥ÊÂ¼ş
+			return;//å¦‚æœæŠ¥é”™ï¼Œåˆ©ç”¨ï¼ˆreturnï¼›ï¼‰è¯­å¥ç»“æŸæ­¤æ¬¡ç­‰å·æŒ‰é’®äº‹ä»¶
 		}
 		if(wellP.endsWith(".")||wellP.endsWith("+")||wellP.endsWith("-")||wellP.endsWith("*")||wellP.endsWith("/"))
-		{// error1:ÓÃÓÚÅĞ¶Ï½áÎ²ÊÇ·ñ·Ç·¨
+		{// error1:ç”¨äºåˆ¤æ–­ç»“å°¾æ˜¯å¦éæ³•
 			System.out.println("error1");
 			textField.setText("error1");
 			return;
 		}
 		for(int op=0;op<text.length()-1;op++)
-		{// error2£ºÈ·±£Ã»ÓĞÁ½¸öÔËËã·ûÁ¬ÔÚÒ»Æğ£¬µ¼ÖÂÎŞ·¨¼ÆËã
+		{// error2ï¼šç¡®ä¿æ²¡æœ‰ä¸¤ä¸ªè¿ç®—ç¬¦è¿åœ¨ä¸€èµ·ï¼Œå¯¼è‡´æ— æ³•è®¡ç®—
 			if(text.charAt(op)=='+'||text.charAt(op)=='*'||text.charAt(op)=='/'||text.charAt(op)=='-')
 			{	if(text.charAt(op+1)=='+'||text.charAt(op+1)=='*'||text.charAt(op+1)=='/')
 				{System.out.println("error2");
@@ -338,40 +338,40 @@ public class Ccal extends JFrame {
 			}
 			
 		}
-		//³ÌĞò¹Ø¼üÖ´ĞĞÇø
+		//ç¨‹åºå…³é”®æ‰§è¡ŒåŒº
 //		
 		String[] ttem =new String[99];
 		ttem =text.split("[+-]");
-//		½«text×Ö·û´®ÒÔ+-ºÅ²ğ·ÖÎª×Ö·û´®Êı×é£¨´ËÊ±* /»¹ÔÚÄÚ£©
+//		å°†textå­—ç¬¦ä¸²ä»¥+-å·æ‹†åˆ†ä¸ºå­—ç¬¦ä¸²æ•°ç»„ï¼ˆæ­¤æ—¶* /è¿˜åœ¨å†…ï¼‰
 		int i=0;
 		int ii3=-1;
 		
-//		²ÉÓÃforÑ­»·Ç¶Ì×for£»µÚÒ»¸öfor ÓÃÓÚ¼ÇÂ¼textÖĞ+-´ÎÊı¡¢Ë³Ğò£¬´ıÄÚ²¿for½áÊø´«Öµºó£¬½øĞĞÔËËã
-//		 Àı ×Ö·û´®¡°13+5*6¡± £¬ÏÖÔÚ²ğ·ÖÎª¡¾13 £¬5*6¡¿
-		for(String temp: ttem)//Àı tempÖµ½«·Ö±ğÎª13 ¡¢5*6
+//		é‡‡ç”¨forå¾ªç¯åµŒå¥—forï¼›ç¬¬ä¸€ä¸ªfor ç”¨äºè®°å½•textä¸­+-æ¬¡æ•°ã€é¡ºåºï¼Œå¾…å†…éƒ¨forç»“æŸä¼ å€¼åï¼Œè¿›è¡Œè¿ç®—
+//		 ä¾‹ å­—ç¬¦ä¸²â€œ13+5*6â€ ï¼Œç°åœ¨æ‹†åˆ†ä¸ºã€13 ï¼Œ5*6ã€‘
+		for(String temp: ttem)//ä¾‹ tempå€¼å°†åˆ†åˆ«ä¸º13 ã€5*6
 		{	char[] fuFu =new char[10];
 			int ic=0;
 			int ii4=-1;
 			ii3+=temp.length();
-//	ÒòÎª¡°13¡±³¤Îª2£¬charAt()ÒÔ0¿ªÊ¼£»Èç¹ûii3Ö±½ÓµÈÓÚ2£¬½«Ö±½ÓµÃµ½¡®+¡¯£¬µ«³ÌĞò²»¾ßÓĞ¿ÉÑ­»·ĞÔ£»ËùÒÔii3ÏÈ×Ô¼õ1		
+//	å› ä¸ºâ€œ13â€é•¿ä¸º2ï¼ŒcharAt()ä»¥0å¼€å§‹ï¼›å¦‚æœii3ç›´æ¥ç­‰äº2ï¼Œå°†ç›´æ¥å¾—åˆ°â€˜+â€™ï¼Œä½†ç¨‹åºä¸å…·æœ‰å¯å¾ªç¯æ€§ï¼›æ‰€ä»¥ii3å…ˆè‡ªå‡1		
 			if(ii3+1<text.length())
 					{
 						fuHao[i]=text.charAt(++ii3);
-// ¼ÇÂ¼·ûºÅ
+// è®°å½•ç¬¦å·
 					}
-// µ±temp ²»º¬* /Ê±£¬indexOf,·µ»¹-1£»ÒÔÏÂÊÇ¶Ô*/µÄÔËËã
-			if(temp.indexOf("*")!=-1||temp.indexOf("/")!=-1)//"13"»á±»É¸Ñ¡µô
+// å½“temp ä¸å«* /æ—¶ï¼ŒindexOf,è¿”è¿˜-1ï¼›ä»¥ä¸‹æ˜¯å¯¹*/çš„è¿ç®—
+			if(temp.indexOf("*")!=-1||temp.indexOf("/")!=-1)//"13"ä¼šè¢«ç­›é€‰æ‰
 					{	double[] fc =new double[2];
-						for( String finnally :temp.split("[*/]"))//"5*6"»á±»·Ö¸îÎª5¡¢6
+						for( String finnally :temp.split("[*/]"))//"5*6"ä¼šè¢«åˆ†å‰²ä¸º5ã€6
 						{if(ic==0)
 							{
-								fc[0]=Double.valueOf(finnally);//µÚÒ»¸öÖµ×¼±¸
+								fc[0]=Double.valueOf(finnally);//ç¬¬ä¸€ä¸ªå€¼å‡†å¤‡
 							}
 						else 
-							{		if('*'==fuFu[ic-1])//ic=0Ê±Ìø¹ı£¬ic²»Îª0Ê±½øĞĞ·ûºÅÅĞ¶Ï£¬¿ªÊ¼¼ÆËã
+							{		if('*'==fuFu[ic-1])//ic=0æ—¶è·³è¿‡ï¼Œicä¸ä¸º0æ—¶è¿›è¡Œç¬¦å·åˆ¤æ–­ï¼Œå¼€å§‹è®¡ç®—
 									{
-									fc[1]=Double.valueOf(finnally);//ÆäÊµÕâ¾ä¿ÉÓĞ¿ÉÎŞww
-									fc[0]=fc[0]*fc[1]; //fc[0]µÄÖµÎªÁ½ÊıÖ®»ı£¬£¨´ËÊ±Ö»ÓĞ*/£¬ÎŞĞèµ£ĞÄ+-£©
+									fc[1]=Double.valueOf(finnally);//å…¶å®è¿™å¥å¯æœ‰å¯æ— ww
+									fc[0]=fc[0]*fc[1]; //fc[0]çš„å€¼ä¸ºä¸¤æ•°ä¹‹ç§¯ï¼Œï¼ˆæ­¤æ—¶åªæœ‰*/ï¼Œæ— éœ€æ‹…å¿ƒ+-ï¼‰
 									}
 									else
 									{
@@ -380,7 +380,7 @@ public class Ccal extends JFrame {
 									}
 							}
 			
-								ii4+=finnally.length();//ÔÚicÎª0Ê±£¬ÒÑ¾­¼ÇÂ¼ÁËµÚÒ»¸öÁ½ÊıÖ®¼äµÄ·ûºÅ
+								ii4+=finnally.length();//åœ¨icä¸º0æ—¶ï¼Œå·²ç»è®°å½•äº†ç¬¬ä¸€ä¸ªä¸¤æ•°ä¹‹é—´çš„ç¬¦å·
 									if(ii4+1<temp.length())
 									{
 										fuFu[ic]=temp.charAt(++ii4);
@@ -388,14 +388,14 @@ public class Ccal extends JFrame {
 				
 								ic++;
 							}
-							cc[i]=fc[0];//ÒªÃ´½á¹û1. ½«*/ÔËËã½á¹û´«µİµ½+-Êı×éÉÏ
+							cc[i]=fc[0];//è¦ä¹ˆç»“æœ1. å°†*/è¿ç®—ç»“æœä¼ é€’åˆ°+-æ•°ç»„ä¸Š
 					}
 		else
-							cc[i]=Double.valueOf(temp);// ÒªÃ´½á¹û2. Ö±½ÓµÃµ½Öµ
+							cc[i]=Double.valueOf(temp);// è¦ä¹ˆç»“æœ2. ç›´æ¥å¾—åˆ°å€¼
 		
 		
 		
-		if( i!=0)//i=0Ê±Ìø¹ı£¬i²»Îª0Ê±½øĞĞ·ûºÅÅĞ¶Ï£¬¿ªÊ¼¼ÆËã+-
+		if( i!=0)//i=0æ—¶è·³è¿‡ï¼Œiä¸ä¸º0æ—¶è¿›è¡Œç¬¦å·åˆ¤æ–­ï¼Œå¼€å§‹è®¡ç®—+-
 		{if(fuHao[i-1]=='+')
 			{
 				cc[0]+=cc[i];
@@ -404,22 +404,22 @@ public class Ccal extends JFrame {
 			{
 				cc[0]-=cc[i];
 			}
-//			ËùÓĞËùÖµÀÛ¼Æµ½cc[0]
+//			æ‰€æœ‰æ‰€å€¼ç´¯è®¡åˆ°cc[0]
 		
 		}
 			
-			i++;//Ñ­»·¼´½«½áÊø£¬i++ÒÔÖ¸ÏòÏÂÒ»¿Õ¼ä´æ´¢
+			i++;//å¾ªç¯å³å°†ç»“æŸï¼Œi++ä»¥æŒ‡å‘ä¸‹ä¸€ç©ºé—´å­˜å‚¨
 			
 				
 			
 		}
 		
-		textField.setText(String.valueOf(cc[0]));//ÉÏ´«Öµµ½ÎÄ±¾¿ò
-		text=String.valueOf(cc[0]);//¸Ä±äÄÚ²¿Öµ£¬·½±ãÓÃ»§ÏÂÒ»²½¼ÆËã
-//		×¢£º¸ºÊıÔËËã²»¿ÉĞĞ
+		textField.setText(String.valueOf(cc[0]));//ä¸Šä¼ å€¼åˆ°æ–‡æœ¬æ¡†
+		text=String.valueOf(cc[0]);//æ”¹å˜å†…éƒ¨å€¼ï¼Œæ–¹ä¾¿ç”¨æˆ·ä¸‹ä¸€æ­¥è®¡ç®—
+//		æ³¨ï¼šè´Ÿæ•°è¿ç®—ä¸å¯è¡Œ
 			
 	}
 }
-//2021Äê10ÔÂ6ÈÕ 23:02:15 
-//¼Æ2002 ´÷ĞË°²
+//2021å¹´10æœˆ6æ—¥ 23:02:15 
+//H W N HAIR 
 //
